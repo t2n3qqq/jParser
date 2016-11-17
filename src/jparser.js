@@ -1,7 +1,7 @@
 (function () {
 
-if (typeof jDataView === 'undefined' && typeof require !== 'undefined') {
-	jDataView = require('jDataView');
+if (typeof jdataview === 'undefined' && typeof require !== 'undefined') {
+	jdataview = require('jdataview');
 }
 
 // Extend code from underscorejs (modified for fast inheritance using prototypes)
@@ -28,8 +28,8 @@ function jParser(view, structure) {
 	if (!(this instanceof arguments.callee)) {
 		throw new Error("Constructor may not be called as a function");
 	}
-	if (!(view instanceof jDataView)) {
-		view = new jDataView(view, undefined, undefined, true);
+	if (!(view instanceof jdataview)) {
+		view = new jdataview(view, undefined, undefined, true);
 	}
 	this.view = view;
 	this.view.seek(0);
